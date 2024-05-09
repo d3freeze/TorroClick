@@ -2187,6 +2187,7 @@ GameObject:
   - component: {fileID: 1216612556}
   - component: {fileID: 1216612555}
   - component: {fileID: 1216612558}
+  - component: {fileID: 1216612559}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -2257,8 +2258,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1905171545}
-        m_MethodName: UpgradePrice
+      - m_Target: {fileID: 1216612559}
+        m_MethodName: UpgradeAutoclicker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2338,7 +2339,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 674.3978
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2413,6 +2414,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1216612559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216612553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e402515fd722bf84e81aa8f2c058ad9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradePriceText: {fileID: 1730321896}
+  clickManager: {fileID: 1905171545}
+  _pointsPerSec: 1
+  basePrice: 100
 --- !u!1001 &1230709186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3211,6 +3228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: {fileID: 23241016}
   pricetxt: {fileID: 1005796181}
+  counter: 0
   yellow: {fileID: 1566719361}
   blue: {fileID: 1757167609}
   purple: {fileID: 156754768}

@@ -7,10 +7,10 @@ public class SceneManage : MonoBehaviour
 {
     public void LoadGameplay()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void ReloadGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

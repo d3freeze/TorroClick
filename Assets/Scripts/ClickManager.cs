@@ -9,7 +9,7 @@ public class ClickManager : MonoBehaviour
 {
     public TMP_Text points;
     public TMP_Text pricetxt;
-    private double counter = 0;
+    public double counter = 0;
     private double price = 100;
     private double addPoints = 1;
     public GameObject yellow;
@@ -23,6 +23,11 @@ public class ClickManager : MonoBehaviour
     public void SetText()
     {
         counter += addPoints;
+        points.SetText((counter - counter % 1).ToString());
+    }
+    public void AddPoints(double Pts)
+    {
+        counter += Pts;
         points.SetText((counter - counter % 1).ToString());
     }
     public void UpgradePrice()
@@ -83,7 +88,7 @@ public class ClickManager : MonoBehaviour
             guy2.SetActive(false);
             guy3.SetActive(true);
         }
-        else if (price >= 5000000000)
+        else if (counter >= 5000000000)
         {
             SceneManager.LoadScene(2);
         }
